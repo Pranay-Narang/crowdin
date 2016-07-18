@@ -142,6 +142,11 @@ files:
     languages_mapping: *anchor
 
   -
+    source:      '/packages/apps/DU-Certified/app/src/main/res/values/strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
+  -
     source:      '/packages/apps/DU-Changelog/res/values/strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
@@ -192,7 +197,7 @@ files:
     languages_mapping: *anchor
 
   -
-    source:      '/packages/apps/PackageInstaller/res/values/strings.xml'
+    source:      '/packages/apps/PackageInstaller/res/values/du_strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
@@ -235,5 +240,4 @@ files:
     source:      '/packages/services/Telephony/res/values/strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
-
 

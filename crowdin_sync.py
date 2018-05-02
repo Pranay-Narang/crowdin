@@ -3,7 +3,7 @@
 # crowdin_sync.py
 #
 # Updates Crowdin source translations and pushes translations
-# directly to DU's Gerrit.
+# directly to DU Gerrit.
 #
 # Copyright (C) 2014-2015 The CyanogenMod Project
 # This code has been modified. Portions copyright (C) 2016, The PAC-ROM Project
@@ -79,7 +79,6 @@ def push_as_commit(base_path, path, name, branch, username):
     except:
         print('Failed to create commit for %s, probably empty: skipping'
               % name, file=sys.stderr)
-        return
 
     # Push commit
     try:
@@ -212,7 +211,7 @@ def download_crowdin(base_path, branch, xml, username, no_download=False):
             paths.append(p.replace('/%s' % branch, ''))
 
     print('\nUploading translations to Gerrit')
-    xml_android = load_xml(x='%s/manifest/default.xml' % base_path)
+    xml_android = load_xml(x='%s/manifest/o8x_default.xml' % base_path)
     items = xml_android.getElementsByTagName('project')
     #items = [x for sub in xml for x in sub.getElementsByTagName('project')]
     all_projects = []
@@ -279,7 +278,7 @@ def main():
     if not check_dependencies():
         sys.exit(1)
 
-    xml_android = load_xml(x='%s/manifest/default.xml' % base_path)
+    xml_android = load_xml(x='%s/manifest/o8x_default.xml' % base_path)
     if xml_android is None:
         sys.exit(1)
 
